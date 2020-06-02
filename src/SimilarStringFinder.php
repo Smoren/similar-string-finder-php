@@ -66,8 +66,8 @@ class SimilarStringFinder
         foreach($strings as $str) {
             $str = mb_strtolower($str);
 
-            $dest[$index][] = $str;
-            $dest[$index][] = TranslitHelper::translit($str);
+            $dest[] = $str;
+            $dest[] = TranslitHelper::translit($str);
         }
 
         return $this;
