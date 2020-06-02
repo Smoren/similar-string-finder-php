@@ -5,5 +5,5 @@
 Пример использования:
 
 ```php
-Smoren\SimilarStringFinderExample::test();
+Smoren\SimilarStringFinder\SimilarStringFinderExample::test();
 ```
