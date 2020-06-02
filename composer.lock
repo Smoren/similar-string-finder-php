@@ -1,0 +1,63 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "afc1c4b4a4b8ba6110d02ace548435bc",
+    "packages": [
+        {
+            "name": "dastanaron/yii2-translit",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dastanaron/yii2-translit.git",
+                "reference": "635737e01a2abd047c86e1e95c4b042b3f1c1846"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dastanaron/yii2-translit/zipball/635737e01a2abd047c86e1e95c4b042b3f1c1846",
+                "reference": "635737e01a2abd047c86e1e95c4b042b3f1c1846",
+                "shasum": ""
+            },
+            "type": "extension",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "dastanaron\\translit\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0+"
+            ],
+            "authors": [
+                {
+                    "name": "dastanaron",
+                    "email": "flow199@yandex.ru"
+                }
+            ],
+            "description": "Transliteration symbols rus-en and en-rus",
+            "keywords": [
+                "extension"
+            ],
+            "time": "2017-10-12T09:28:48+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {
+        "php": ">=7.2.0",
+        "ext-json": "*",
+        "ext-mbstring": "*"
+    },
+    "platform-dev": []
+}

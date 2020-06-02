@@ -1,0 +1,34 @@
+{
+  "name": "smoren/similar-string-finder",
+  "description": "Similar string finder",
+  "keywords": ["string", "search", "similar"],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Smoren",
+      "email": "ofigate@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.2.0",
+    "ext-json": "*",
+    "ext-mbstring": "*",
+    "dastanaron/yii2-translit": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Smoren\\SimilarStringFinder\\": "src"
+    }
+  },
+  "config": {
+    "fxp-asset": {
+      "enabled": false
+    }
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://asset-packagist.org"
+    }
+  ]
+}
