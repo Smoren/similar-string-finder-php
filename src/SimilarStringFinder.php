@@ -11,7 +11,7 @@ namespace Smoren\SimilarStringFinder;
 class SimilarStringFinder
 {
     /**
-     * @var array
+     * @var array карта-хранилище
      */
     protected $storage;
 
@@ -24,8 +24,10 @@ class SimilarStringFinder
     }
 
     /**
-     * @param string $input
-     * @return int|string|null
+     * Найти наиболее подходящий ключ для строки
+     * @param string $input исходная строка
+     * @return mixed
+     * @throws NotFoundException
      */
     public function find(string $input)
     {
@@ -47,12 +49,17 @@ class SimilarStringFinder
             }
         }
 
+        if($bestId === null) {
+            throw new NotFoundException();
+        }
+
         return $bestId;
     }
 
     /**
-     * @param $index
-     * @param array $strings
+     * Добавить сопоставление ключа набору строк
+     * @param mixed $index ключ
+     * @param array $strings набор строк
      * @return $this
      */
     public function addStrings($index, array $strings): self
@@ -74,9 +81,10 @@ class SimilarStringFinder
     }
 
     /**
-     * @param string $lhs
-     * @param string $rhs
-     * @return float
+     * Получить индекс похожести двух строк
+     * @param string $lhs первая строка
+     * @param string $rhs вторая строка
+     * @return float индекс похожести
      */
     protected function compareStrings(string $lhs, string $rhs): float
     {
