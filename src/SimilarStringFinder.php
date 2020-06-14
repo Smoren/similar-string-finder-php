@@ -26,10 +26,11 @@ class SimilarStringFinder
     /**
      * Найти наиболее подходящий ключ для строки
      * @param string $input исходная строка
+     * @param float $minSimilarityIndex минимальный индекс соответствия
      * @return mixed
      * @throws NotFoundException
      */
-    public function find(string $input)
+    public function find(string $input, float $minSimilarityIndex = -1)
     {
         $input = mb_strtolower($input);
         $inputTranslit = TranslitHelper::translit($input);
@@ -49,7 +50,7 @@ class SimilarStringFinder
             }
         }
 
-        if($bestId === null) {
+        if($bestId === null || $bestSimilarityIndex < $minSimilarityIndex) {
             throw new NotFoundException();
         }
 
@@ -88,6 +89,6 @@ class SimilarStringFinder
      */
     protected function compareStrings(string $lhs, string $rhs): float
     {
-        return similar_text($lhs, $rhs)/max(strlen($lhs), strlen($rhs));
+        return similar_text($lhs, $rhs)/min(strlen($lhs), strlen($rhs));
     }
 }
