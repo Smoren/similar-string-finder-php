@@ -17,7 +17,7 @@ class SimilarStringFinderExample extends SimilarStringFinder
     public static function test()
     {
         $inst = new static();
-        echo "оконный => " . $inst->find('оконный') . "\n";
+        echo "оконный => " . $inst->find('оконный', -1, $accuracy) . " (accuracy: {$accuracy})" . "\n";
         echo "небесный => " . $inst->find('небесный') . "\n";
     }
 }

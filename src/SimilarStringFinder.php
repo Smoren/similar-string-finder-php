@@ -27,10 +27,11 @@ class SimilarStringFinder
      * Найти наиболее подходящий ключ для строки
      * @param string $input исходная строка
      * @param float $minSimilarityIndex минимальный индекс соответствия
+     * @param float|null $accuracy индекс соответствия результата
      * @return mixed
      * @throws NotFoundException
      */
-    public function find(string $input, float $minSimilarityIndex = -1)
+    public function find(string $input, float $minSimilarityIndex = -1, ?float &$accuracy = null)
     {
         $input = mb_strtolower($input);
         $inputTranslit = TranslitHelper::translit($input);
@@ -54,6 +55,7 @@ class SimilarStringFinder
             throw new NotFoundException();
         }
 
+        $accuracy = $bestSimilarityIndex;
         return $bestId;
     }
 

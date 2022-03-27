@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "afc1c4b4a4b8ba6110d02ace548435bc",
+    "content-hash": "f8c1ae48bc6f9cd387f46d80103615a1",
     "packages": [
         {
             "name": "dastanaron/yii2-translit",
@@ -45,6 +45,10 @@
             "keywords": [
                 "extension"
             ],
+            "support": {
+                "issues": "https://github.com/dastanaron/yii2-translit/issues",
+                "source": "https://github.com/dastanaron/yii2-translit/tree/1.0.0"
+            },
             "time": "2017-10-12T09:28:48+00:00"
         }
     ],
@@ -59,5 +63,6 @@
         "ext-json": "*",
         "ext-mbstring": "*"
     },
-    "platform-dev": []
+    "platform-dev": [],
+    "plugin-api-version": "2.1.0"
 }
