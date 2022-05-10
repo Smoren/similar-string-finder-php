@@ -91,6 +91,6 @@ class SimilarStringFinder
      */
     protected function compareStrings(string $lhs, string $rhs): float
     {
-        return similar_text($lhs, $rhs)/max((strlen($lhs)+strlen($rhs))/2, 1);
+        return similar_text($lhs, $rhs)/max((mb_strlen($lhs)+mb_strlen($rhs))/2, 1);
     }
 }
